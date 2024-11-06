@@ -1,0 +1,11 @@
+# Large image using Ubuntu with extra packages
+FROM ubuntu:20.04
+RUN apt-get update && apt-get install -y \
+    curl \
+    python3 \
+    nodejs \
+    npm \
+    ruby \
+    build-essential \
+    && rm -rf /var/lib/apt/lists/*
+CMD ["echo", "Large Image with Ubuntu"]
