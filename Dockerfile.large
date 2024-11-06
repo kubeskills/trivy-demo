@@ -1,11 +1,38 @@
-# Large image using Ubuntu with extra packages
+# Large image based on Ubuntu with debugging tools
 FROM ubuntu:20.04
+
+# Set environment variable to avoid timezone prompts
+ENV DEBIAN_FRONTEND=noninteractive
+
+# Update the package list and install debugging and network tools
 RUN apt-get update && apt-get install -y \
     curl \
-    python3 \
-    nodejs \
-    npm \
-    ruby \
+    wget \
+    net-tools \
+    iputils-ping \
+    dnsutils \
+    traceroute \
+    telnet \
+    tcpdump \
+    strace \
+    lsof \
+    htop \
+    vim \
+    nano \
+    git \
+    unzip \
+    zip \
+    gnupg \
+    software-properties-common \
     build-essential \
+    iproute2 \
+    jq \
+    less \
+    nmap \
+    socat \
+    rsync \
+    sysstat \
     && rm -rf /var/lib/apt/lists/*
-CMD ["echo", "Large Image with Ubuntu"]
+
+# Set a default command
+CMD ["bash"]
