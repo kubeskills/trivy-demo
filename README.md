@@ -44,6 +44,6 @@ trivy image demo:large > large_scan_report.txt
 ```
 
 View Scan Reports Here:
-[Minimal Scan Report](minimal-scan-report.txt)
+[Minimal Scan Report](minimal-scan-report.txt)  
 [Large Scan Report](large-scan-report.txt)
 
